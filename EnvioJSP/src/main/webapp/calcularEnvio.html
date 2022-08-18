@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de envíos</h1>
+    <form action="resumenEnvio.jsp" method="post">
+        <div>
+            <label for="origen">Ciudad Origen: </label>
+            <input type="text" name="origen" id="origen" required>
+        </div>
+        <div>
+            <input type="radio" name="nacionalOri" id="nacionalOri" value="nacional" checked>
+            <label for="nacionalOri">Nacional</label>
+        </div>
+        <div>
+            <input type="radio" name="nacionalOri" id="extranjeroOri" value="extranjero">
+            <label for="extranjeroOri">Extranjero</label>
+        </div>
+
+
+        <div>
+            <label for="destino">Ciudad Destino: </label>
+            <input type="text" name="destino" id="destino" required>
+        </div>
+        <div>
+            <input type="radio" name="nacionalDest" id="nacionalDest" value="nacional" checked>
+            <label for="nacionalDest">Nacional</label>
+        </div>
+        <div>
+            <input type="radio" name="nacionalDest" id="extranjeroDest" value="extranjero">
+            <label for="extranjeroDest">Extranjero</label>
+        </div>
+
+        <div>
+            <label for="tipo">Tipo de Envío:</label>
+            <select name="tipo" id="tipo">
+                <option value="Paq 10 - Antes de las 10 h">Paq 10 - Antes de las 10 h </option>
+                <option value="Paq 14 - Antes de las 14 h">Paq 14 - Antes de las 14 h </option>
+                <option value="Paq 24 - Al día siguiente">Paq 24 - Al día siguiente </option>
+            </select>
+        </div>
+        <div>
+            <label for="peso">Peso: </label>
+            <input type="number" name="peso" id="peso" min="1" value="1"
+            max="40" step="1"> 
+            Kg
+        </div>
+        <input type="submit" value="Calcular Precio">
+    </form>
+</body>
+</html>
